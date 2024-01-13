@@ -5,8 +5,9 @@ import time
 from psycopg2 import OperationalError as Psycopg2OpError
 from django.db.utils import OperationalError
 from django.core.management.base import BaseCommand
+
+# Create new command named wait_for_db
 class Command(BaseCommand):
-    
     def handle(self, *args, **options):
         self.stdout.write("Wating for database...")
         db_up = False
